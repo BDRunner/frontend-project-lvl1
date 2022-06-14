@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/BDRunner/frontend-project-lvl1#readme",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "dependencies": {
     "elint": "^2.0.1",
