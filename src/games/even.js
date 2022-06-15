@@ -2,7 +2,7 @@ import basisOfGames from '../index.js';
 import getRandNumber from '../randomNumberCreator.js';
 
 const evenGame = () => {
-  const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const gameRuleEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const taskEven = () => {
     const rndNum = getRandNumber(100);
@@ -14,7 +14,7 @@ const evenGame = () => {
 
     return [question, result];
   };
-  basisOfGames(gameRule, taskEven);
+  basisOfGames(gameRuleEven, taskEven);
 };
 
 export default evenGame;
