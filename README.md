@@ -25,4 +25,8 @@
 
 [![asciicast](https://asciinema.org/a/2FHf1JePpQCGdu6w5O0JjI2Ww.svg)](https://asciinema.org/a/2FHf1JePpQCGdu6w5O0JjI2Ww)
 
+<h3><b>brain-gcd</b></h3>
+
+[![asciicast](https://asciinema.org/a/2zPVeEZ9wEwRt4d9W3zQDDhtU.svg)](https://asciinema.org/a/2zPVeEZ9wEwRt4d9W3zQDDhtU)
+
 
