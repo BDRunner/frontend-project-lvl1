@@ -29,4 +29,7 @@
 
 [![asciicast](https://asciinema.org/a/2zPVeEZ9wEwRt4d9W3zQDDhtU.svg)](https://asciinema.org/a/2zPVeEZ9wEwRt4d9W3zQDDhtU)
 
+<h3><b>brain-progression</b></h3>
+
+[![asciicast](https://asciinema.org/a/6o6vbRsN7S9O33xW7Lp7Az6l4.svg)](https://asciinema.org/a/6o6vbRsN7S9O33xW7Lp7Az6l4)
 
