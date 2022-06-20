@@ -21,4 +21,8 @@
 
 [![asciicast](https://asciinema.org/a/wXPzLpLPdiIAWrFAgQUJiaCOY.svg)](https://asciinema.org/a/wXPzLpLPdiIAWrFAgQUJiaCOY)
 
+<h3><b>brain-calc</b></h3>
+
+[![asciicast](https://asciinema.org/a/2FHf1JePpQCGdu6w5O0JjI2Ww.svg)](https://asciinema.org/a/2FHf1JePpQCGdu6w5O0JjI2Ww)
+
 
