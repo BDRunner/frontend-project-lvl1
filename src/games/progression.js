@@ -15,24 +15,22 @@ const progressionGame = () => {
     //  первое число прогрессии
     const getStartNum = () => {
       const num = getRandNumber(100);
-      const limitNum = num + (step * lastIndex);
+      const limitNum = num + (getStep() * lastIndex);
       if (limitNum > 100) { return getStartNum(); }
       return num;
     };
-    const startNum = getStartNum();
     //   создание массива прогрессии
-    for (let i = 0, nextNum = startNum; i < 10; i += 1, nextNum += step) {
+    for (let i = 0, nextNum = getStartNum(); i < 10; i += 1, nextNum += step) {
       resultArr.push(nextNum);
     }
     const randomIndex = getRandNumber(lastIndex);
-    const replacedNum = resultArr[randomIndex];
     //  сокрытие рандомного элемента массива
-    let result = replacedNum;
+    let result = resultArr[randomIndex];
     resultArr[randomIndex] = '..';
     //  преобразование в строку
     const question = resultArr.join(' ');
     result = result.toString();
-    return [question, result];
+    return [question, result.toString()];
   };
 
   basisOfGames(gameRuleProgression, taskProgression);
