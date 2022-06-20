@@ -10,7 +10,7 @@ const evenGame = () => {
     const isEven = (num) => num % 2 === 0;
 
     const question = `${rndNum}`;
-    const result = (isEven(rndNum) ? 'Yes' : 'No');
+    const result = (isEven(rndNum) ? 'yes' : 'no');
 
     return [question, result];
   };

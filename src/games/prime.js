@@ -13,7 +13,7 @@ const primeGame = () => {
         flag = false;
       }
     }
-    const result = (flag === true) ? 'Yes' : 'No';
+    const result = (flag === true) ? 'yes' : 'no';
     return [question, result.toString()];
   };
   basisOfGames(gameRulePrime, taskPrime);
