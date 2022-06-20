@@ -30,7 +30,7 @@ const progressionGame = () => {
     //  преобразование в строку
     const question = resultArr.join(' ');
     result = result.toString();
-    return [question, result.toString()];
+    return [question, result];
   };
 
   basisOfGames(gameRuleProgression, taskProgression);
