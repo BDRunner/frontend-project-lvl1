@@ -11,6 +11,7 @@ const progressionGame = () => {
       const necessaryStep = getRandNumber(7);
       return (necessaryStep === 0 ? getStep() : necessaryStep);
     };
+    //  шаг
     const step = getStep();
     //  первое число прогрессии
     const getStartNum = () => {
