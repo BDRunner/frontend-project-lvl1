@@ -11,15 +11,16 @@ const progressionGame = () => {
       const necessaryStep = getRandNumber(7);
       return (necessaryStep === 0 ? getStep() : necessaryStep);
     };
+    const step = getStep();
     //  первое число прогрессии
     const getStartNum = () => {
       const num = getRandNumber(100);
-      const limitNum = num + (getStep() * lastIndex);
+      const limitNum = num + (step * lastIndex);
       if (limitNum > 100) { return getStartNum(); }
       return num;
     };
     //   создание массива прогрессии
-    for (let i = 0, nextNum = getStartNum(); i < 10; i += 1, nextNum += getStep()) {
+    for (let i = 0, nextNum = getStartNum(); i < 10; i += 1, nextNum += step) {
       resultArr.push(nextNum);
     }
     const randomIndex = getRandNumber(lastIndex);
