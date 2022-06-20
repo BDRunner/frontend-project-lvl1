@@ -33,3 +33,8 @@
 
 [![asciicast](https://asciinema.org/a/6o6vbRsN7S9O33xW7Lp7Az6l4.svg)](https://asciinema.org/a/6o6vbRsN7S9O33xW7Lp7Az6l4)
 
+<h3><b>brain-prime</b></h3>
+
+[![asciicast](https://asciinema.org/a/kHGVC8JRiHSaaWYr2TuJR1FyA.svg)](https://asciinema.org/a/kHGVC8JRiHSaaWYr2TuJR1FyA)
+
+
