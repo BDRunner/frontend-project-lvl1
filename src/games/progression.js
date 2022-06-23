@@ -19,10 +19,11 @@ const progressionGame = () => {
       }
       progressionArray.push(progressionArray[i] + step);
     }
-
+    //  делаю копию массива
     const arrayToOutput = progressionArray.slice();
     const getRandomElement = getRandomNumber(9);
     const result = progressionArray[getRandomElement].toString();
+    //  закрываю символ в массиве на выводе
     arrayToOutput[getRandomElement] = '..';
     const question = arrayToOutput.join(' ');
     return [question, result];
