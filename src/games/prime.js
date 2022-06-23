@@ -9,6 +9,7 @@ const primeGame = () => {
     const question = randomNumber.toString();
 
     const isSimply = (num) => {
+      if (num === 0) return 'no';
       let flag = true;
       for (let i = 2; i < num; i += 1) {
         if (num % i === 0) {
