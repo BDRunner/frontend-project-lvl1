@@ -1,34 +1,39 @@
-import basisOfGames from '../index.js';
-import getRandNumber from '../randomNumberCreator.js';
+import buildGame from '../index.js';
+import getRandomNumber from '../randomNumberCreator.js';
 
 const calcGame = () => {
   const gameRuleCalc = 'What is the result of the expression?';
 
-  const taskCalc = () => {
-    const num1 = getRandNumber(100);
-    const num2 = getRandNumber(100);
+  const generateExpression = () => {
+    const num1 = getRandomNumber(100);
+    const num2 = getRandomNumber(100);
 
-    const arrSymbol = ['+', '-', '*'];
-    const symbol = arrSymbol[getRandNumber(3)];
+    const operator = ['+', '-', '*'];
+    const selectOperator = operator[getRandomNumber(3)];
 
-    const question = `${num1} ${symbol} ${num2}`;
-    let result = 0;
-    switch (symbol) {
-      case '+':
-        result = num1 + num2;
-        break;
-      case '-':
-        result = num1 - num2;
-        break;
-      case '*':
-        result = num1 * num2;
-        break;
-      default:
-        result = null;
-    }
-    return [question, result.toString()];
+    const question = `${num1} ${selectOperator} ${num2}`;
+
+    const chosenExpression = (a, b, mathOperator) => {
+      let result;
+      switch (mathOperator) {
+        case '+':
+          result = a + b;
+          break;
+        case '-':
+          result = a - b;
+          break;
+        case '*':
+          result = a * b;
+          break;
+        default:
+          throw new Error(`Unknown order state: '${mathOperator}'!`);
+      }
+      return result.toString();
+    };
+
+    return [question, chosenExpression(num1, num2, selectOperator)];
   };
-  basisOfGames(gameRuleCalc, taskCalc);
+  buildGame(gameRuleCalc, generateExpression);
 };
 
 export default calcGame;

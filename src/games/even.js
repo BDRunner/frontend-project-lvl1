@@ -1,11 +1,11 @@
-import basisOfGames from '../index.js';
-import getRandNumber from '../randomNumberCreator.js';
+import buildGame from '../index.js';
+import getRandomNumber from '../randomNumberCreator.js';
 
 const evenGame = () => {
   const gameRuleEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  const taskEven = () => {
-    const rndNum = getRandNumber(100);
+  const checkEven = () => {
+    const rndNum = getRandomNumber(100);
 
     const isEven = (num) => num % 2 === 0;
 
@@ -14,7 +14,7 @@ const evenGame = () => {
 
     return [question, result];
   };
-  basisOfGames(gameRuleEven, taskEven);
+  buildGame(gameRuleEven, checkEven);
 };
 
 export default evenGame;

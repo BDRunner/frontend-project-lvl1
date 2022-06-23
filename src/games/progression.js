@@ -1,39 +1,33 @@
-import basisOfGames from '../index.js';
-import getRandNumber from '../randomNumberCreator.js';
+import buildGame from '../index.js';
+import getRandomNumber from '../randomNumberCreator.js';
 
 const progressionGame = () => {
   const gameRuleProgression = 'What number is missing in the progression?';
-  const taskProgression = () => {
-    const resultArr = [];
-    const lastIndex = 9;
-    //  шаг чисел
+  const generateProgression = () => {
+    const progressionArray = [];
+
     const getStep = () => {
-      const necessaryStep = getRandNumber(7);
-      return (necessaryStep === 0 ? getStep() : necessaryStep);
+      const sizeStep = getRandomNumber(7);
+      return sizeStep === 0 ? getStep() : sizeStep;
     };
-    //  шаг
+
     const step = getStep();
-    //  первое число прогрессии
-    const getStartNum = () => {
-      const num = getRandNumber(100);
-      const limitNum = num + (step * lastIndex);
-      if (limitNum > 100) { return getStartNum(); }
-      return num;
-    };
-    //   создание массива прогрессии
-    for (let i = 0, nextNum = getStartNum(); i < 10; i += 1, nextNum += step) {
-      resultArr.push(nextNum);
+
+    for (let i = 0; i < 9; i += 1) {
+      if (progressionArray.length === 0) {
+        progressionArray.push(getRandomNumber(100));
+      }
+      progressionArray.push(progressionArray[i] + step);
     }
-    const randomIndex = getRandNumber(lastIndex);
-    //  сокрытие рандомного элемента массива
-    let result = resultArr[randomIndex];
-    resultArr[randomIndex] = '..';
-    //  преобразование в строку
-    const question = resultArr.join(' ');
-    result = result.toString();
+
+    const arrayToOutput = progressionArray.slice();
+    const getRandomElement = getRandomNumber(9);
+    const result = progressionArray[getRandomElement].toString();
+    arrayToOutput[getRandomElement] = '..';
+    const question = arrayToOutput.join(' ');
     return [question, result];
   };
 
-  basisOfGames(gameRuleProgression, taskProgression);
+  buildGame(gameRuleProgression, generateProgression);
 };
 export default progressionGame;
