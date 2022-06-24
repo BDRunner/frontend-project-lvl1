@@ -15,6 +15,30 @@
   <li><b>brain-prime</b>. Determining a prime number.</li>
 </ol>
 
+<h2><b>How to install:</b></h2>
+<b>Install Makefile on your computer</b>
+<table>
+<thead>
+<th>Windows</th>
+<th>MacOS</th>
+<th>Linux</th>
+</thead>
+<tbody>
+<tr>
+<td>123</td>
+<td>123</td>
+<td>123</td>
+<tr>
+</tbody>
+</table>
+<ol>
+  <li><b>Install Makefile on your computer</b>brew install make</li>
+  <li><b>brain-calc</b>. Arithmetic expressions to be calculated.</li>
+  <li><b>brain-gcd</b>. Determining the largest common divisor.</li>
+  <li><b>brain-progression</b>. Finding missing numbers in a sequence of numbers.</li>
+  <li><b>brain-prime</b>. Determining a prime number.</li>
+</ol>
+
 <h2><b>Overviews:</b></h2>
 
 <h3><b>brain-even</b></h3>
