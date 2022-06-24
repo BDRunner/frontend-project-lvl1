@@ -31,10 +31,8 @@
     <tr>
   </tbody>
 </table>
-<b>After installation, enter the directory and run the command: 
-  ```
-  make install
-  ```
+<b>After installation, enter the directory and run the command: <code>make install</code>
+
 
 <h2><b>Overviews:</b></h2>
 
