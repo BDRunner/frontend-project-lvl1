@@ -22,7 +22,7 @@
   </tbody>
 </table>
 <b>After installation, enter the directory and run the command: <code>make install</code>
- <hr> 
+
   
 [![asciicast](https://asciinema.org/a/neOJ8f4iawATn1Mr92bnzvvD4.svg)](https://asciinema.org/a/neOJ8f4iawATn1Mr92bnzvvD4)
   
