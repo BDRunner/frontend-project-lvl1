@@ -8,13 +8,13 @@ const gcdGame = () => {
     const num1 = getRandomNumber(100);
     const num2 = getRandomNumber(100);
     const question = `${num1} ${num2}`;
-    const gcdTask = (a, b) => {
+    const calcGCD = (a, b) => {
       if (!b) {
         return a;
       }
-      return gcdTask(b, a % b);
+      return calcGCD(b, a % b);
     };
-    const result = gcdTask(num1, num2);
+    const result = calcGCD(num1, num2);
 
     return [question, result.toString()];
   };

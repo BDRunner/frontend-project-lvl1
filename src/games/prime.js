@@ -12,14 +12,14 @@ const primeGame = () => {
       if (num === 0) return 'no';
       let flag = true;
       for (let i = 2; i < num; i += 1) {
-        if (num % i === 0) {
-          flag = false;
-        }
+        if (num % i === 0) flag = false;
       }
       return (flag === true) ? 'yes' : 'no';
     };
 
-    return [question, isSimply(randomNumber)];
+    const result = isSimply(randomNumber);
+
+    return [question, result];
   };
   buildGame(gameRulePrime, checkSimplicity);
 };

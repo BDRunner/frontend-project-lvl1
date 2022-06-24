@@ -14,24 +14,17 @@ const calcGame = () => {
     const question = `${num1} ${selectOperator} ${num2}`;
 
     const chosenExpression = (a, b, mathOperator) => {
-      let result;
       switch (mathOperator) {
-        case '+':
-          result = a + b;
-          break;
-        case '-':
-          result = a - b;
-          break;
-        case '*':
-          result = a * b;
-          break;
+        case '+': return a + b;
+        case '-': return a - b;
+        case '*': return a * b;
         default:
-          throw new Error(`Unknown order state: '${mathOperator}'!`);
+          throw new Error(`Unsupported operator: '${mathOperator}'!`);
       }
-      return result.toString();
     };
 
-    return [question, chosenExpression(num1, num2, selectOperator)];
+    const result = chosenExpression(num1, num2, selectOperator);
+    return [question, result.toString()];
   };
   buildGame(gameRuleCalc, generateExpression);
 };
