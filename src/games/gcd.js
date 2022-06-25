@@ -5,16 +5,16 @@ const gcdGame = () => {
   const gameRuleGcd = 'Find the greatest common divisor of given numbers.';
 
   const generateGcd = () => {
-    const num1 = getRandomNumber(100);
-    const num2 = getRandomNumber(100);
-    const question = `${num1} ${num2}`;
-    const calcGCD = (a, b) => {
-      if (!b) {
-        return a;
+    const operand1 = getRandomNumber(100);
+    const operand2 = getRandomNumber(100);
+    const question = `${operand1} ${operand2}`;
+    const calcGCD = (num1, num2) => {
+      if (!num2) {
+        return num1;
       }
-      return calcGCD(b, a % b);
+      return calcGCD(num2, num1 % num2);
     };
-    const result = calcGCD(num1, num2);
+    const result = calcGCD(operand1, operand2);
 
     return [question, result.toString()];
   };
