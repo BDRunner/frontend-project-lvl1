@@ -12,9 +12,9 @@ const getStep = () => {
 const getProgression = () => {
   const maxNumberSize = 100;
   const progressionArray = [];
-  const lastIndex = 9;
+  const maxProgressionSize = 9;
   const step = getStep();
-  for (let i = 0; i < lastIndex; i += 1) {
+  for (let i = 0; i < maxProgressionSize; i += 1) {
     if (progressionArray.length === 0) {
       progressionArray.push(getRandomNumber(maxNumberSize));
     }
