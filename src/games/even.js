@@ -10,9 +10,9 @@ const getQuestion = (num) => `${num}`;
 const checkEven = () => {
   const maxNumberSize = 100;
   const randomNumber = getRandomNumber(maxNumberSize);
+  const evenResult = isEven(randomNumber) ? 'yes' : 'no';
   const question = getQuestion(randomNumber);
-  const result = isEven(randomNumber) ? 'yes' : 'no';
-  return [question, result];
+  return [question, evenResult];
 };
 
 const evenGame = () => buildGame(getGameRule(), checkEven);
