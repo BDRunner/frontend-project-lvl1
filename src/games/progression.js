@@ -29,7 +29,7 @@ const getQuestion = (progression, getRandomElement) => {
   return arrayToOutput.join(' ');
 };
 
-const checkProgression = () => {
+const generateProgression = () => {
   const maxNumberSize = 9;
   const progression = getProgression();
   const getRandomElement = getRandomNumber(maxNumberSize);
@@ -38,6 +38,6 @@ const checkProgression = () => {
   return [question, result];
 };
 
-const progressionGame = () => buildGame(getGameRule(), checkProgression);
+const progressionGame = () => buildGame(getGameRule(), generateProgression);
 
 export default progressionGame;
