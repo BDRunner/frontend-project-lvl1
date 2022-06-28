@@ -1,5 +1,5 @@
 import buildGame from '../index.js';
-import getRandomNumber from '../randomNumberCreator.js';
+import { getRandomNumber, maxNumberSize } from '../numberCreator.js';
 
 const getGameRule = () => 'What is the result of the expression?';
 
@@ -19,18 +19,13 @@ const getOperator = () => {
   return selectOperator;
 };
 
-const getOperand = () => {
-  const maxNumberSize = 100;
-  return getRandomNumber(maxNumberSize);
-};
-
-const getQueston = (num1, num2, operator) => `${num1} ${operator} ${num2}`;
+const getOperand = () => getRandomNumber(maxNumberSize);
 
 const generateExpression = () => {
   const operand1 = getOperand();
   const operand2 = getOperand();
   const operator = getOperator();
-  const question = getQueston(operand1, operand2, operator);
+  const question = `${operand1} ${operator} ${operand2}`;
   const result = getExpression(operand1, operand2, operator);
   return [question, result.toString()];
 };

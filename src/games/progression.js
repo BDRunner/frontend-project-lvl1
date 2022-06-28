@@ -1,5 +1,5 @@
 import buildGame from '../index.js';
-import getRandomNumber from '../randomNumberCreator.js';
+import { getRandomNumber, maxNumberSize } from '../numberCreator.js';
 
 const getGameRule = () => 'What number is missing in the progression?';
 
@@ -10,7 +10,6 @@ const getStep = () => {
 };
 
 const getProgression = () => {
-  const maxNumberSize = 100;
   const progressionArray = [];
   const maxProgressionSize = 9;
   const step = getStep();
@@ -30,9 +29,9 @@ const getQuestion = (progression, getRandomElement) => {
 };
 
 const generateProgression = () => {
-  const maxNumberSize = 9;
+  const maxSizeOfElement = 9;
   const progression = getProgression();
-  const getRandomElement = getRandomNumber(maxNumberSize);
+  const getRandomElement = getRandomNumber(maxSizeOfElement);
   const result = progression[getRandomElement].toString();
   const question = getQuestion(progression, getRandomElement);
   return [question, result];

@@ -1,5 +1,5 @@
 import buildGame from '../index.js';
-import getRandomNumber from '../randomNumberCreator.js';
+import { getRandomNumber, maxNumberSize } from '../numberCreator.js';
 
 const getGameRule = () => 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -10,12 +10,10 @@ const isPrime = (num) => {
   }
   return true;
 };
-const getQuestion = (num) => num.toString();
 
 const checkPrime = () => {
-  const maxNumberSize = 100;
   const randomNumber = getRandomNumber(maxNumberSize);
-  const question = getQuestion(randomNumber);
+  const question = randomNumber.toString();
   const result = isPrime(randomNumber) ? 'yes' : 'no';
   return [question, result];
 };
