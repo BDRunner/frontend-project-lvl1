@@ -1,20 +1,19 @@
 import buildGame from '../index.js';
 import getRandomNumber from '../randomNumberCreator.js';
 
-const evenGame = () => {
-  const gameRuleEven = 'Answer "yes" if the number is even, otherwise answer "no".';
+const getGameRule = () => 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  const checkEven = () => {
-    const randomNumber = getRandomNumber(100);
+const isEven = (num) => num % 2 === 0;
 
-    const isEven = (num) => num % 2 === 0;
+const getQuestion = (num) => `${num}`;
 
-    const question = `${randomNumber}`;
-    const result = isEven(randomNumber) ? 'yes' : 'no';
-
-    return [question, result];
-  };
-  buildGame(gameRuleEven, checkEven);
+const checkEven = () => {
+  const randomNumber = getRandomNumber(100);
+  const question = getQuestion(randomNumber);
+  const result = isEven(randomNumber) ? 'yes' : 'no';
+  return [question, result];
 };
+
+const evenGame = () => buildGame(getGameRule(), checkEven);
 
 export default evenGame;
