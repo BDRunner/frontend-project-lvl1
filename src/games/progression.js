@@ -1,22 +1,20 @@
 import buildGame from '../index.js';
-import { getRandomNumber, maxNumberSize } from '../numberCreator.js';
+import { getRandomNumber, maxNumberSize, maxProgressionSize } from '../helperLibrary.js';
 
-const getGameRule = () => 'What number is missing in the progression?';
+const gameRule = 'What number is missing in the progression?';
 
 const getStep = () => {
+  const minStepSize = 1;
   const maxStepSize = 7;
-  const sizeStep = getRandomNumber(maxStepSize);
-  return sizeStep > 0 ? sizeStep : getStep();
+  const sizeStep = getRandomNumber(maxStepSize, minStepSize);
+  return sizeStep;
 };
 
 const getProgression = () => {
   const progressionArray = [];
-  const maxProgressionSize = 9;
+  progressionArray.push(getRandomNumber(maxNumberSize));
   const step = getStep();
   for (let i = 0; i < maxProgressionSize; i += 1) {
-    if (progressionArray.length === 0) {
-      progressionArray.push(getRandomNumber(maxNumberSize));
-    }
     progressionArray.push(progressionArray[i] + step);
   }
   return progressionArray;
@@ -29,14 +27,13 @@ const getQuestion = (progression, getRandomElement) => {
 };
 
 const generateProgression = () => {
-  const maxSizeOfElement = 9;
   const progression = getProgression();
-  const getRandomElement = getRandomNumber(maxSizeOfElement);
-  const result = progression[getRandomElement].toString();
-  const question = getQuestion(progression, getRandomElement);
-  return [question, result];
+  const randomIndexProgression = getRandomNumber(maxProgressionSize);
+  const result = progression[randomIndexProgression];
+  const question = getQuestion(progression, randomIndexProgression);
+  return [question, result.toString()];
 };
 
-const progressionGame = () => buildGame(getGameRule(), generateProgression);
+const startingProgressionGame = () => buildGame(gameRule, generateProgression);
 
-export default progressionGame;
+export default startingProgressionGame;

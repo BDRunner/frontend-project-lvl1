@@ -1,7 +1,7 @@
 import buildGame from '../index.js';
-import { getRandomNumber, maxNumberSize } from '../numberCreator.js';
+import { getRandomNumber, maxNumberSize } from '../helperLibrary.js';
 
-const getGameRule = () => 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num === 0) return false;
@@ -18,6 +18,6 @@ const checkPrime = () => {
   return [question, result];
 };
 
-const primeGame = () => buildGame(getGameRule(), checkPrime);
+const startingPrimeGame = () => buildGame(gameRule, checkPrime);
 
-export default primeGame;
+export default startingPrimeGame;

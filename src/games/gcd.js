@@ -1,9 +1,7 @@
 import buildGame from '../index.js';
-import { getRandomNumber, maxNumberSize } from '../numberCreator.js';
+import { getRandomNumber, maxNumberSize } from '../helperLibrary.js';
 
-const getGameRule = () => 'Find the greatest common divisor of given numbers.';
-
-const getOperand = () => getRandomNumber(maxNumberSize);
+const gameRule = 'Find the greatest common divisor of given numbers.';
 
 const calcGCD = (num1, num2) => {
   if (!num2) {
@@ -12,14 +10,14 @@ const calcGCD = (num1, num2) => {
   return calcGCD(num2, num1 % num2);
 };
 
-const generateGcd = () => {
-  const operand1 = getOperand();
-  const operand2 = getOperand();
+const generateGCD = () => {
+  const operand1 = getRandomNumber(maxNumberSize);
+  const operand2 = getRandomNumber(maxNumberSize);
   const question = `${operand1} ${operand2}`;
   const result = calcGCD(operand1, operand2);
   return [question, result.toString()];
 };
 
-const gcdGame = () => buildGame(getGameRule(), generateGcd);
+const startingGCDGame = () => buildGame(gameRule, generateGCD);
 
-export default gcdGame;
+export default startingGCDGame;

@@ -1,7 +1,7 @@
 import buildGame from '../index.js';
-import { getRandomNumber, maxNumberSize } from '../numberCreator.js';
+import { getRandomNumber, maxNumberSize } from '../helperLibrary.js';
 
-const getGameRule = () => 'What is the result of the expression?';
+const gameRule = 'What is the result of the expression?';
 
 const getExpression = (num1, num2, mathOperator) => {
   switch (mathOperator) {
@@ -19,17 +19,15 @@ const getOperator = () => {
   return selectOperator;
 };
 
-const getOperand = () => getRandomNumber(maxNumberSize);
-
 const generateExpression = () => {
-  const operand1 = getOperand();
-  const operand2 = getOperand();
+  const operand1 = getRandomNumber(maxNumberSize);
+  const operand2 = getRandomNumber(maxNumberSize);
   const operator = getOperator();
   const question = `${operand1} ${operator} ${operand2}`;
   const result = getExpression(operand1, operand2, operator);
   return [question, result.toString()];
 };
 
-const calcGame = () => buildGame(getGameRule(), generateExpression);
+const startingCalcGame = () => buildGame(gameRule, generateExpression);
 
-export default calcGame;
+export default startingCalcGame;

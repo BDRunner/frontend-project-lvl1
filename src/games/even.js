@@ -1,7 +1,7 @@
 import buildGame from '../index.js';
-import { getRandomNumber, maxNumberSize } from '../numberCreator.js';
+import { getRandomNumber, maxNumberSize } from '../helperLibrary.js';
 
-const getGameRule = () => 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => num % 2 === 0;
 
@@ -12,6 +12,6 @@ const checkEven = () => {
   return [question, evenResult];
 };
 
-const evenGame = () => buildGame(getGameRule(), checkEven);
+const startingEvenGame = () => buildGame(gameRule, checkEven);
 
-export default evenGame;
+export default startingEvenGame;
