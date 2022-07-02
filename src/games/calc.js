@@ -15,7 +15,7 @@ const getExpression = (num1, num2, mathOperator) => {
 
 const getOperator = () => {
   const operators = ['+', '-', '*'];
-  const selectOperator = operators[Math.floor(Math.random() * operators.length)];
+  const selectOperator = operators[getRandomNumber(operators.length)];
   return selectOperator;
 };
 
