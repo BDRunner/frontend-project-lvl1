@@ -15,13 +15,13 @@ const getExpression = (num1, num2, mathOperator) => {
 
 const getOperator = () => {
   const operators = ['+', '-', '*'];
-  const selectOperator = operators[getRandomNumber(operators.length)];
+  const selectOperator = operators[getRandomNumber(operators.length - 1)];
   return selectOperator;
 };
 
 const generateExpression = () => {
-  const operand1 = getRandomNumber(maxNumberSize);
-  const operand2 = getRandomNumber(maxNumberSize);
+  const operand1 = getRandomNumber(1, maxNumberSize);
+  const operand2 = getRandomNumber(1, maxNumberSize);
   const operator = getOperator();
   const question = `${operand1} ${operator} ${operand2}`;
   const result = getExpression(operand1, operand2, operator);
