@@ -34,6 +34,6 @@ const generateProgression = () => {
   return [question, result.toString()];
 };
 
-const startingProgressionGame = () => buildGame(gameRule, generateProgression);
+const progressionOperationResult = () => buildGame(gameRule, generateProgression);
 
-export default startingProgressionGame;
+export default progressionOperationResult;

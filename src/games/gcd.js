@@ -18,6 +18,6 @@ const generateGCD = () => {
   return [question, result.toString()];
 };
 
-const startingGCDGame = () => buildGame(gameRule, generateGCD);
+const GCDOperationResult = () => buildGame(gameRule, generateGCD);
 
-export default startingGCDGame;
+export default GCDOperationResult;

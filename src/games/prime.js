@@ -18,6 +18,6 @@ const checkPrime = () => {
   return [question, result];
 };
 
-const startingPrimeGame = () => buildGame(gameRule, checkPrime);
+const primeOperationResult = () => buildGame(gameRule, checkPrime);
 
-export default startingPrimeGame;
+export default primeOperationResult;

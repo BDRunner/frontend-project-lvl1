@@ -12,6 +12,6 @@ const checkEven = () => {
   return [question, evenResult];
 };
 
-const startingEvenGame = () => buildGame(gameRule, checkEven);
+const evenOperationResult = () => buildGame(gameRule, checkEven);
 
-export default startingEvenGame;
+export default evenOperationResult;
