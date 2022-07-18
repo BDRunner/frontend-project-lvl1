@@ -3,17 +3,14 @@ import { getRandomNumber, maxNumberSize, maxProgressionSize } from '../helperLib
 
 const gameRule = 'What number is missing in the progression?';
 
-const getStep = () => {
-  const minStepSize = 1;
-  const maxStepSize = 7;
-  const sizeStep = getRandomNumber(maxStepSize, minStepSize);
-  return sizeStep;
-};
+const minStepSize = 1;
+const maxStepSize = 7;
+const sizeStep = getRandomNumber(maxStepSize, minStepSize);
 
 const getProgression = () => {
   const progressionArray = [];
   progressionArray.push(getRandomNumber(maxNumberSize));
-  const step = getStep();
+  const step = sizeStep;
   for (let i = 0; i < maxProgressionSize; i += 1) {
     progressionArray.push(progressionArray[i] + step);
   }

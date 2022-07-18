@@ -3,7 +3,7 @@ import { getRandomNumber, maxNumberSize } from '../helperLibrary.js';
 
 const gameRule = 'What is the result of the expression?';
 
-const getExpression = (num1, num2, mathOperator) => {
+const makeExpression = (num1, num2, mathOperator) => {
   switch (mathOperator) {
     case '+': return num1 + num2;
     case '-': return num1 - num2;
@@ -25,7 +25,7 @@ const generateExpression = () => {
   const operand2 = getRandomNumber(maxNumberSize);
   const operator = getOperator();
   const question = `${operand1} ${operator} ${operand2}`;
-  const result = getExpression(operand1, operand2, operator);
+  const result = makeExpression(operand1, operand2, operator);
   return [question, result.toString()];
 };
 
